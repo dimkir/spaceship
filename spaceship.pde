@@ -29,6 +29,10 @@
 // declare the arect
 AnimatedRectangle arect;
 
+// Sound effects are loaded and managed here
+// they need to be loaded in setup()
+SoundEffects sfx;
+
 
 boolean pause;
 
@@ -41,10 +45,10 @@ void setup() {
   size(800, 600);
   float randomX = random(width);
   float randomY = random(height);
-  arect = new AnimatedRectangle(10, 10, randomX, randomY, 31.0 );
+  arect = new AnimatedRectangle(150, height/2, randomX, randomY, 11.0 );
   //bgObject = new Background("360-degree_lg.jpg");
   bgObject = new Background("space-needle-panorama.jpg"); 
-  setupSound();
+  //sfx = new SoundEffects(this);
 }// setup
 
 
@@ -56,8 +60,9 @@ void mousePressed() {
 
 void keyPressed() {
   //println("Key pressed");
-  pause = switchPause();
-  saveFrame("frame-####.png");
+  //pause = switchPause();
+  saveFrame("c:\\tmp\\frame-####.tga");
+  
 }    
 
 
